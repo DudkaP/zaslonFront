@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {IDictionary} from "./interfaces";
+import {DicService} from "./services";
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,10 @@ import {IDictionary} from "./interfaces";
 })
 export class AppComponent {
   word:IDictionary;
+  constructor(private dicService:DicService) { }
 
   catch(event: IDictionary) {
-    console.log('top ' + event.words);
-    this.word = event;
+    this.dicService.getById(event.id).subscribe(value => this.word = value)
   }
+
 }

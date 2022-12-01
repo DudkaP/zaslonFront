@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {IDictionary} from "../interfaces";
+import {IDictionary, INewData} from "../interfaces";
 import {Observable} from "rxjs";
 import {urls} from "../constants";
 
@@ -11,8 +11,8 @@ export class DicService {
   constructor(private httpClient:HttpClient) {
   }
 
-  create(words:IDictionary):Observable<IDictionary> {
-    return this.httpClient.post<IDictionary>(urls.saveData, words)
+  create(words:INewData):Observable<INewData> {
+    return this.httpClient.post<INewData>(urls.saveData, words)
   }
 
   getAllData():Observable<IDictionary[]> {
