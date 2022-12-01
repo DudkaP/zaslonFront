@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
+
 import {DicService} from "../../services";
 import {INewData} from "../../interfaces";
-import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-add-random',

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+
 import {IDictionary} from "./interfaces";
 import {DicService} from "./services";
 

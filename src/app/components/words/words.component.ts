@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+
 import {DicService} from "../../services";
 import {IDictionary} from "../../interfaces";
 
